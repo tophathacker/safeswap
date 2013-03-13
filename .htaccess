@@ -1,0 +1,11 @@
+# BEGIN safeswap mod_rewrite module (makes URL's look nicer)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REWUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END safeswap
