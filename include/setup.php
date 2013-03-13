@@ -6,7 +6,7 @@ require(ROOTPATH . 'include/utils.php');
 
 if(!file_exists(ROOTPATH . 'config/config.php'))
   copy(ROOTPATH . 'config/default-config.php', ROOTPATH . 'config/config.php');
-require(ROOTPATH . 'config/default-config.php');
+require(ROOTPATH . 'config/config.php');
 
 //i'll eventually get this from config.php file
 $database = new db_object('localhost','safeswap','safeswap','ss_','safeswap');
