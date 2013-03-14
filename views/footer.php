@@ -11,7 +11,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="public/js/bootstrap.js"></script>
+    <script src="<?php echo ROOTPATH; ?>public/js/bootstrap.js"></script>
 
   </body>
 </html>

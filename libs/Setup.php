@@ -40,9 +40,10 @@ class Setup {
 
     require $file;
     $controller = new $regClass;
-
     if (isset($regFunction)) {
       $controller->{$regFunction}($regValues);
+    }else {
+      $controller->index();
     }
     
   }

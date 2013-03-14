@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo ROOTPATH; ?>public/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -47,7 +47,7 @@
         margin-top: 28px;
       }
     </style>
-    <link href="public/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<?php echo ROOTPATH; ?>public/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -58,13 +58,14 @@
 
   <body>
 
+    <!-- change this to a 'bulid menu' function later -->
     <div class="container-narrow">
 
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="help">Help</a></li>
+          <li class="active"><a href="<?php echo ROOTPATH; ?>">Home</a></li>
+          <li><a href="<?php echo ROOTPATH; ?>about">About</a></li>
+          <li><a href="<?php echo ROOTPATH; ?>help">Help</a></li>
         </ul>
         <h3 class="muted">Safe Swap</h3>
       </div>
