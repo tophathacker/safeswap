@@ -10,11 +10,11 @@
           <label>Username</label>
           <input id="username" type="text" class="span3" placeholder="Desired Username"><p id="usernamecheck" class="span2 pull-right"></p>
           <label>First Name</label>
-          <input type="text" class="span4" placeholder="Your First Name">
+          <input type="text" class="span3" placeholder="Your First Name">
           <label>Last Name</label>
-          <input type="text" class="span4" placeholder="Your Last Name">
+          <input type="text" class="span3" placeholder="Your Last Name">
           <label>Email Address</label>
-          <input type="text" class="span4" placeholder="Your email address">
+          <input id="email" type="text" class="span3" placeholder="Your email address"><p id="emailcheck" class="span2 pull-right"></p>
         </div>
 
 
