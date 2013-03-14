@@ -1,12 +1,9 @@
 <?php
 
-/** similar to workdpress or cmsms, this file doesn't do anything but load the first few files required to get the page going */
+// should probably use spl_autoload
+require 'libs/Setup.php';
+require 'libs/Controller.php';
+require 'libs/Model.php';
+require 'libs/View.php';
 
-//enable debugging for now
-error_reporting(E_ALL); 
-ini_set( 'display_errors','1');
-//setup the root path for everything that might need it in the future
-define ('ROOTPATH', dirname(__FILE__) . '/');
-
-//jump into the main setup file
-require(ROOTPATH . 'include/setup.php');
+$app = new Setup();
