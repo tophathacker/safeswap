@@ -3,6 +3,11 @@
 class Setup {
 
   function setupURL($url) {
+    //with this setup the URL would be
+    // http://rooturl.com/controller/function/args
+    // where controller is the name of the class, 
+    // function is the name of a function in that class,
+    // args (if any) get passed to that function
     $trimmedUrl = rtrim($url, '/');
     return(explode('/', $trimmedUrl));
   }
@@ -38,9 +43,13 @@ class Setup {
       }
     }
 
+    //require the file that has class we need
     require $file;
+    //create new controller of the requested class
     $controller = new $regClass;
-    if (isset($regFunction)) {
+    $controller->LoadModel($regClass);
+    //if there is a function to call, check if it exists
+    if (isset($regFunction) && method_exists($controller,$regFunction)) {
       $controller->{$regFunction}($regValues);
     }else {
       $controller->index();
