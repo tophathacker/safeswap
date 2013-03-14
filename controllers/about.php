@@ -7,7 +7,7 @@ class About extends Controller {
 	}
     
     public function index(){
-        $this->view->render('about/index',null);
+        $this->view->render('about/index',null,null);
     }
 
 }

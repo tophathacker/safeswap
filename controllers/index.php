@@ -7,7 +7,7 @@ class Index extends Controller {
 	}
     
     public function index(){
-      $this->view->render('index/index',null);
+      $this->view->render('index/index',null,null);
     }
     
     public function echothis($arg){
@@ -16,5 +16,9 @@ class Index extends Controller {
     
     public function getPost(){
       $this->model->getPost();
+    }
+    
+    public function signup(){
+      $this->view->render('index/signup',null,1);
     }
 }

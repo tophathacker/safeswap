@@ -7,6 +7,6 @@ class Help extends Controller {
 	}
     
     public function index(){
-        $this->view->render('help/index',null);
+        $this->view->render('help/index',null,null);
     }
 }
