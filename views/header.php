@@ -60,14 +60,3 @@
 
     <!-- change this to a 'bulid menu' function later -->
     <div class="container-narrow">
-
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="<?php echo ROOTPATH; ?>">Home</a></li>
-          <li><a href="<?php echo ROOTPATH; ?>about">About</a></li>
-          <li><a href="<?php echo ROOTPATH; ?>help">Help</a></li>
-        </ul>
-        <h3 class="muted">Safe Swap</h3>
-      </div>
-
-      <hr>

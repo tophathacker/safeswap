@@ -1,15 +1,16 @@
 $(document).ready(function() {
   //check if username is taken
   $('#username').bind('keyup', function() {
+    var usrcheck = $('#usernamecheck');
     if ($(this).val().length < 5) {
-      $('#usernamecheck').html('too short');
+      usrcheck.html('too short');
     } else {
-      $('#usernamecheck').html('checking...');
+      usrcheck.html('checking...');
       $.getJSON('forms/checkusername/' + $(this).val(), function(data){
         if(data.available === 'true')
-          $('#usernamecheck').html("Username Available");
+          usrcheck.html("Username Available");
         else
-          $('#usernamecheck').html("Username Taken!");
+          usrcheck.html("Username Taken!");
       });
     }
   });
