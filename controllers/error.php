@@ -7,7 +7,7 @@ class Error extends Controller {
 	}
     
     public function index(){
-		$this->view->render('error/index');
+		$this->view->render('error/index',null);
     }
 
 }
