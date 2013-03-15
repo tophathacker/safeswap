@@ -21,7 +21,8 @@ class Setup {
     $regClass = 'error';
     $regFunction = null;
     $regValues = null;
-
+    $postJSON = null;
+    
     if (!isset($_GET['url'])) {
       //this defaults to index when there is nothing in the URL string
       $file = 'controllers/index.php';
@@ -42,7 +43,8 @@ class Setup {
         }
       }
     }
-
+    if(isset($_POST['json']))
+      $postJSON = $_POST['json'];
     //require the file that has class we need
     require $file;
     //create new controller of the requested class
@@ -50,7 +52,7 @@ class Setup {
     $controller->LoadModel($regClass);
     //if there is a function to call, check if it exists
     if (isset($regFunction) && method_exists($controller,$regFunction)) {
-      $controller->{$regFunction}($regValues);
+      $controller->{$regFunction}($regValues,$postJSON);
     }else {
       $controller->index();
     }

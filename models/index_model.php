@@ -8,6 +8,6 @@ class Index_Model extends Model{
   public function getPost(){
     //RAWWR!! :)
     $data = $this->db->query("SELECT username FROM ss_user");
-    print_r($data->fetchAll());
+    return (json_encode($data->fetchAll()));
   }
 }

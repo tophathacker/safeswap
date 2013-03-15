@@ -27,7 +27,7 @@
 
       /* Main marketing message and sign up button */
       .jumbotron {
-        margin: 60px 0;
+        margin: -20px 0 60px;
         text-align: center;
       }
       .jumbotron h1 {
@@ -57,6 +57,8 @@
   </head>
 
   <body>
-
+    <!-- add hidden login modal -->
+    <?php require 'views/forms/login.php'; ?>
+    
     <!-- change this to a 'bulid menu' function later -->
     <div class="container-narrow">
