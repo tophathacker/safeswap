@@ -10,15 +10,13 @@ class Index extends Controller {
       $this->view->render('index/index',null,null);
     }
     
-    public function echothis($arg){
-      $this->view->render('index/echothis',$arg);
-    }
-    
     public function getPost(){
-      $this->model->getPost();
+      //get json post list
+      echo $this->model->getPost();
     }
     
     public function signup(){
+      // set third param to 1 so header/footer isn't displayed again
       $this->view->render('index/signup',null,1);
     }
 }

@@ -15,7 +15,7 @@ $(document).ready(function() {
     }
   });
 
-  //check for valid email
+  //check for valid email in signup form
   $('#email').bind('keyup', function() {
 
     var emailaddressVal = $(this).val();
@@ -33,6 +33,7 @@ $(document).ready(function() {
 
   });
 
+  //check that passwords match for signup
   $('#password1').bind('keyup', checkPasswords);
   $('#password2').bind('keyup', checkPasswords);
   function checkPasswords() {

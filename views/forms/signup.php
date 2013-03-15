@@ -8,7 +8,7 @@
       <div class="row">
         <div class="span5">
           <label>Username</label>
-          <input id="signupusername" type="text" class="span3" placeholder="Desired Username"><p id="usernamecheck" class="span2 pull-right"></p>
+          <input id="signupusername" type="text" class="span3" placeholder="Desired Username"><p id="usernamecheck" class="span2 pull-right">...</p>
           <label>Password</label>
           <input type="password" id="password1" class="span3" placeholder="******"><p id="passwordcheck" class="span2 pull-right"></p>
           <input type="password" id="password2" class="span3" placeholder="******">

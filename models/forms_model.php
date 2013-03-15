@@ -8,7 +8,7 @@ class Forms_Model extends Model {
 
   public function checkusername($username) {
     //RAWWR!! :)
-    $object = $this->db->query("SELECT username FROM ss_user WHERE username='" . $username . "'");
+    $object = $this->db->query("SELECT login FROM ss_user WHERE login='" . $username . "'");
     $data = $object->fetchAll();
     if (!isset($data) || count($data) == 0) {
       $response['available'] = 'true';

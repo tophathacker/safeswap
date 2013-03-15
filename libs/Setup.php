@@ -17,11 +17,11 @@ class Setup {
     ini_set('display_errors', '1');
 
     //default to error so set everything to that first
-    $file = 'controllers/error.php';
-    $regClass = 'error';
-    $regFunction = null;
-    $regValues = null;
-    $postJSON = null;
+    $file = 'controllers/error.php';  //path to controller
+    $regClass = 'error';              //controller class name
+    $regFunction = null;              //function name (if isset)
+    $regValues = null;                //values name (if isset)
+    $postJSON = null;                 //post values (i always assume it's json for now)
     
     if (!isset($_GET['url'])) {
       //this defaults to index when there is nothing in the URL string
@@ -43,6 +43,7 @@ class Setup {
         }
       }
     }
+    
     if(isset($_POST['json']))
       $postJSON = $_POST['json'];
     //require the file that has class we need
@@ -50,7 +51,7 @@ class Setup {
     //create new controller of the requested class
     $controller = new $regClass;
     $controller->LoadModel($regClass);
-    //if there is a function to call, check if it exists
+    //if there is a function to call, check if it exists and if not call index
     if (isset($regFunction) && method_exists($controller,$regFunction)) {
       $controller->{$regFunction}($regValues,$postJSON);
     }else {

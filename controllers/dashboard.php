@@ -1,5 +1,6 @@
 <?php
 
+//this will end up being a user dashboard for profile settings and such
 class Dashboard extends Controller {
 
 	function __construct() {

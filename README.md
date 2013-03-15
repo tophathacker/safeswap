@@ -15,4 +15,4 @@ I've converted over to an MVC architecture, the first I've attempted. That being
 
 Future
 ========
-I'd like to make bootstrap a git submodule, but i'll deal with that later when I start to add templating.
+I'd like to make bootstrap a git submodule, also would like to use handlebars.js or Mustache to generate markup from templates
