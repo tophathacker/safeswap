@@ -1,9 +1,16 @@
 <?php
 
+/**
+ * main model that gets extended
+ */
 class Model {
-// basic model class always starts a db object for use in any model
-	function __construct() {
-		$this->db = new Database();
-	}
+
+  /**
+   * constructor for model that creates a new db, accessable from any model
+   * that extends this model
+   */
+  function __construct() {
+    $this->db = new Database();
+  }
 
 }

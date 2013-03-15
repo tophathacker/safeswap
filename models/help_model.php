@@ -1,12 +1,16 @@
 <?php
 
+/**
+ * help model... not used yet really
+ */
 class Help_Model extends Model {
 
-	function __construct() {
-      parent::__construct();
-	}
+  function __construct() {
+    parent::__construct();
+  }
 
-    public function blah(){
-      return "blah";
-    }
+  public function blah() {
+    return "blah";
+  }
+
 }

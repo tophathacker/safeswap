@@ -1,7 +1,20 @@
 <?php
 
+/**
+ * Setup class that starts the right controller
+ *
+ * @copyright  2013 Ryan Hatfield
+ * @version    Alpha: 1
+ * @link       http://github.com/tophathacker/safeswap
+ */
 class Setup {
 
+  /**
+   * setupURL takes in a URL and echo's back an array contaning class,function, and argument
+   * 
+   * @param string $url unaltered GET_ url
+   * @return array returns an array where [0] is the class, [1] is the function and [2] is the argument
+   */
   function setupURL($url) {
     //with this setup the URL would be
     // http://rooturl.com/controller/function/args
@@ -12,6 +25,9 @@ class Setup {
     return(explode('/', $trimmedUrl));
   }
 
+  /**
+   * constructor for the Setup class, no params
+   */
   function __construct() {
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
@@ -22,7 +38,7 @@ class Setup {
     $regFunction = null;              //function name (if isset)
     $regValues = null;                //values name (if isset)
     $postJSON = null;                 //post values (i always assume it's json for now)
-    
+
     if (!isset($_GET['url'])) {
       //this defaults to index when there is nothing in the URL string
       $file = 'controllers/index.php';
@@ -43,8 +59,8 @@ class Setup {
         }
       }
     }
-    
-    if(isset($_POST['json']))
+
+    if (isset($_POST['json']))
       $postJSON = $_POST['json'];
     //require the file that has class we need
     require $file;
@@ -52,12 +68,11 @@ class Setup {
     $controller = new $regClass;
     $controller->LoadModel($regClass);
     //if there is a function to call, check if it exists and if not call index
-    if (isset($regFunction) && method_exists($controller,$regFunction)) {
-      $controller->{$regFunction}($regValues,$postJSON);
-    }else {
+    if (isset($regFunction) && method_exists($controller, $regFunction)) {
+      $controller->{$regFunction}($regValues, $postJSON);
+    } else {
       $controller->index();
     }
-    
   }
 
 }
