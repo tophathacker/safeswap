@@ -1,3 +1,0 @@
-[submodule "deps/handlebars.js"]
-	path = deps/handlebars.js
-	url = git://github.com/wycats/handlebars.js.git
