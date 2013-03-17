@@ -1,6 +1,6 @@
-[submodule "deps/node"]
-	path = deps/node
-	url = git://github.com/joyent/node.git
 [submodule "deps/handlebars.js"]
 	path = deps/handlebars.js
 	url = git://github.com/wycats/handlebars.js.git
+[submodule "deps/node"]
+	path = deps/node
+	url = git://github.com/joyent/node.git
